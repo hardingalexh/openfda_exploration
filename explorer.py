@@ -7,7 +7,7 @@ print(fifty_results_url)
 
 fifty_results_rq = requests.get(fifty_results_url)
 fifty_results = fifty_results_rq.json()
-breakpoint()
+
 
 count_of_results = fifty_results["meta"]["results"]["total"]
 
@@ -17,6 +17,3 @@ for result in fifty_results:
     for reaction in result.get("patient", {}).get("reaction"):
         print(reaction.get("reactionmeddrapt"))
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-
-
-breakpoint()
