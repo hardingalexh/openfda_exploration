@@ -11,12 +11,12 @@ breakpoint()
 
 count_of_results = fifty_results["meta"]["results"]["total"]
 
-# for result in fifty_results:
-#     for drug in result.get("patient").get("drug"):
-#         print(drug.get("activesubstance", {}).get("activesubstancename"))
-#     for reaction in result.get("patient", {}).get("reaction"):
-#         print(reaction.get("reactionmeddrapt"))
-#     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+for result in fifty_results:
+    for drug in result.get("patient").get("drug"):
+        print(drug.get("activesubstance", {}).get("activesubstancename"))
+    for reaction in result.get("patient", {}).get("reaction"):
+        print(reaction.get("reactionmeddrapt"))
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
 
 breakpoint()
